@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f8f0df">
+<title>Anurag &amp; Mamta — Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   WEDDING DETAILS — copied from the supplied invitation brief
+   Bride: Mamta Gupta
+   Groom: Anurag Gupta
+   Name order on the site: Anurag & Mamta
+   Initials for the seal or monogram: A&M
+   Blessing line at the very top: Shree Ganeshaya Namah
+   Hero subtitle: Wedding Invitation
+   Main wedding date and time: 2 December 2026, 7:00 PM IST
+   Venue name: Red Magic Ballroom and Lawns
+   Venue address: Sunil Chaugule, opp. Euroschool, Sector-19, Airoli, Navi Mumbai, Maharashtra 400708
+   Google Maps link: https://maps.app.goo.gl/SmYmaVLWQK3dBiEh6
+   Dress code: [ ]
+   Families line: With love, the Gupta families
+   Functions:
+   Matmangra | 30 Nov 2026 | Monday | 10:00 AM
+   Haldi | 30 Nov 2026 | Monday | 7:00 AM
+   Mayan Pooja | 01 Dec 2026 | Tuesday | 10:00 AM
+   Wedding | 02 Dec 2026 | Wednesday | 7:00 PM
+   Photos: photo1.jpg, photo2.jpg, photo3.jpg, photo4.jpg, photo5.jpg
+   ========================================================= */
+:root{
+  --ivory:#F8F0DF;--cream:#EAD9B9;--gold:#C6A15B;--gold-deep:#967039;
+  --wine:#702D37;--rose:#D8A2A0;--green:#526B43;--ink:#49352B;
+  --paper:#fffaf0;--line:rgba(150,112,57,.55);
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --body:"Lora",Georgia,serif;--script:"Great Vibes",cursive;
+  --safe-top:env(safe-area-inset-top,0px);--safe-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box}
+html,body{margin:0;overflow-x:clip;background:var(--ivory);color:var(--ink);font-family:var(--body);font-size:16px;scroll-behavior:smooth}
+body{min-width:320px}
+button,a{font:inherit}
+button{cursor:pointer}
+a{color:inherit}
+button:focus-visible,a:focus-visible{outline:3px solid var(--gold-deep);outline-offset:4px}
+body.locked{overflow:hidden;height:100svh}
+.paper-grain{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.13;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.19'/%3E%3C/svg%3E")}
+#effects,#plane-layer{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:4}
+#effects{position:fixed;z-index:30}
+#plane-layer{z-index:2;overflow:visible}
+main,.site-footer{position:relative;z-index:3}
+.site-shell{position:relative;isolation:isolate}
+.section{position:relative;padding:76px 20px}
+.inner{width:min(100%,900px);margin:auto}
+.eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);text-align:center;margin:0 0 12px}
+.section-title{font:500 clamp(34px,7vw,48px)/1.05 var(--serif);color:var(--wine);text-align:center;margin:0}
+.section-sub{font:italic 15px/1.7 var(--serif);text-align:center;color:#79634c;margin:12px auto 30px;max-width:560px}
+.ornament{display:flex;align-items:center;justify-content:center;gap:12px;margin:20px auto 28px;color:var(--gold-deep)}
+.ornament:before,.ornament:after{content:"";height:1px;width:64px;background:linear-gradient(90deg,transparent,var(--gold))}
+.ornament:after{transform:scaleX(-1)}
+.ornament span{font-size:20px}
+.frame{position:relative;background:rgba(255,250,240,.83);border:1px solid var(--gold);outline:1px solid rgba(198,161,91,.35);outline-offset:5px;box-shadow:0 12px 34px rgba(89,58,34,.09)}
+.frame:before,.frame:after{content:"✿";position:absolute;color:var(--green);font-size:20px;opacity:.8}
+.frame:before{top:10px;left:12px}.frame:after{right:12px;bottom:10px;color:var(--wine)}
+.gold-rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:25px auto;max-width:240px}
+.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border:1px solid var(--gold);background:var(--wine);color:#fff8e8;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:13px;box-shadow:0 4px 12px rgba(112,45,55,.16);transition:transform .25s,background .25s}
+.btn:hover{transform:translateY(-2px);background:#58232c}
+.btn.secondary{background:transparent;color:var(--wine);border-color:var(--gold-deep)}
+/* Opening invitation */
+#opening{position:fixed;inset:0;z-index:100;background:radial-gradient(ellipse at center,#fffaf0 0%,#ead9b9 100%);display:grid;place-items:center;padding:20px;padding-top:calc(20px + var(--safe-top));padding-bottom:calc(20px + var(--safe-bottom));transition:opacity .8s ease,visibility .8s}
+#opening.opened{opacity:0;visibility:hidden;pointer-events:none}
+.opening-card{width:min(88vw,390px);min-height:520px;max-height:82svh;position:relative;display:grid;place-items:center;text-align:center;padding:40px 28px;background:linear-gradient(135deg,#fffaf0,#f4e8d2);border:1px solid var(--gold);box-shadow:0 20px 60px rgba(83,55,31,.2);overflow:hidden}
+.opening-card:before{content:"";position:absolute;inset:12px;border:1px solid rgba(150,112,57,.65);pointer-events:none}
+.opening-card:after{content:"";position:absolute;inset:19px;border:1px solid rgba(198,161,91,.35);pointer-events:none}
+.opening-arch{position:absolute;top:34px;left:50%;transform:translateX(-50%);width:190px;height:125px;border:1px solid var(--gold);border-bottom:0;border-radius:100px 100px 0 0;opacity:.55}
+.opening-flap{position:absolute;inset:0 0 auto;height:52%;background:linear-gradient(150deg,#f8efdc,#e7d3af);clip-path:polygon(0 0,100% 0,50% 78%);transform-origin:top;transition:transform .9s cubic-bezier(.2,.7,.2,1);z-index:2;border-bottom:1px solid var(--gold)}
+#opening.opened .opening-flap{transform:rotateX(180deg)}
+.opening-content{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;gap:12px}
+.opening-blessing{font:500 14px var(--serif);letter-spacing:.12em;color:var(--wine)}
+.opening-title{font:44px/1 var(--script);color:var(--wine);margin:5px 0}
+.seal{width:86px;height:86px;border-radius:50%;border:2px solid #a77d42;background:radial-gradient(circle at 35% 30%,#9b4d4e,#702d37 70%);color:#f7e6bd;box-shadow:0 0 0 5px rgba(198,161,91,.2),inset 0 0 0 2px rgba(255,235,190,.5);font:24px var(--serif);display:grid;place-items:center;transition:transform .3s,box-shadow .3s}
+.seal:hover{transform:scale(1.06);box-shadow:0 0 28px rgba(198,161,91,.8),0 0 0 6px rgba(198,161,91,.25)}
+.open-hint{font-size:13px;color:#81694c;letter-spacing:.1em;text-transform:uppercase;margin-top:10px}
+.spark-burst{position:absolute;inset:0;pointer-events:none;z-index:5}
+.spark-burst i{position:absolute;width:5px;height:5px;background:#d9b76e;border-radius:50%;animation:burst 1.2s ease-out forwards}
+@keyframes burst{from{transform:translate(0,0) scale(.2);opacity:1}to{transform:translate(var(--x),var(--y)) scale(0);opacity:0}}
+/* Hero */
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:100px 20px 70px;overflow:hidden;background:radial-gradient(ellipse at 50% 40%,rgba(255,255,255,.8),transparent 60%),linear-gradient(180deg,#f8f0df,#efe1c7)}
+.hero:before,.hero:after{content:"";position:absolute;width:210px;height:290px;border:1px solid rgba(150,112,57,.4);border-radius:50%;transform:rotate(35deg);pointer-events:none}
+.hero:before{left:-130px;top:14%}.hero:after{right:-130px;bottom:12%;transform:rotate(-35deg)}
+.hero-inner{position:relative;z-index:2;max-width:780px}
+/* .ganesh{width:54px;height:54px;margin:0 auto 15px;display:block;object-fit:contain} */
+.ganesh {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 15px;
+  display: block;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.hero-blessing{font:500 15px var(--serif);letter-spacing:.15em;color:var(--wine);margin:0 0 24px}
+.hero-kicker{font:italic 18px var(--serif);color:var(--gold-deep);margin:0 0 12px}
+.hero-names{font:clamp(65px,14vw,112px)/.9 var(--script);color:var(--wine);margin:0;text-shadow:0 2px 0 rgba(255,255,255,.6)}
+.hero-amp{font:italic 22px var(--serif);color:var(--gold-deep);display:block;margin:13px 0}
+.hero-subtitle{font:500 16px var(--serif);letter-spacing:.28em;text-transform:uppercase;color:var(--ink);margin:25px 0 12px}
+.hero-date{font:500 21px var(--serif);color:var(--wine);letter-spacing:.08em}
+.hero-ornament{width:min(80%,280px);margin:26px auto;color:var(--gold-deep)}
+.scroll-hint{display:block;margin:42px auto 0;color:var(--gold-deep);font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.scroll-hint:after{content:"↓";display:block;font-size:22px;margin-top:9px}
+/* Couple */
+.couple-section{background:linear-gradient(180deg,#f8f0df,#f3e7d2)}
+.couple-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}
+.person-card{text-align:center;padding:25px 18px 28px}
+.person-card .portrait{width:150px;height:175px;margin:0 auto 18px;border:1px solid var(--gold);padding:6px;background:#fff9ed;display:grid;place-items:center;overflow:hidden}
+.person-card .portrait svg{width:100%;height:100%}
+.person-card .portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.person-label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep)}
+.person-name{font:42px/1.1 var(--script);color:var(--wine);margin:8px 0 0}
+/* Countdown */
+.count-section{background:linear-gradient(180deg,#efe1c7,#f8f0df);text-align:center}
+.count-wrap{max-width:690px;margin:30px auto 0;padding:30px 16px}
+.count-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.count-unit{padding:16px 5px;border:1px solid rgba(150,112,57,.5);background:rgba(255,250,240,.65)}
+.count-num{font:500 clamp(30px,7vw,48px)/1 var(--serif);color:var(--wine);font-variant-numeric:tabular-nums}
+.count-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#7e674f;margin-top:9px}
+#just-married{font:italic 26px var(--serif);color:var(--wine);display:none}
+/* Venue */
+.venue-section{background:#f8f0df}
+.venue-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin:28px 0}
+.venue-card{padding:22px 15px;text-align:center;min-height:128px}
+.venue-card .mini-label{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:var(--gold-deep)}
+.venue-card p{margin:9px 0 0;font:500 19px/1.35 var(--serif);color:var(--wine)}
+.venue-card .small{font:14px/1.6 var(--body);color:var(--ink)}
+.map-card{position:relative;overflow:hidden;margin:28px 0 24px;background:#eee1c7;border:1px solid var(--gold);min-height:210px;display:block;text-decoration:none}
+.map-card svg{position:absolute;inset:0;width:100%;height:100%}
+.map-caption{position:relative;z-index:1;text-align:center;padding:150px 12px 16px;font:500 18px var(--serif);color:var(--wine);text-shadow:0 1px #fff}
+.venue-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+/* Events */
+.events-section{background:linear-gradient(180deg,#f3e7d2,#f8f0df)}
+.timeline{max-width:660px;margin:35px auto 0;position:relative}
+.timeline:before{content:"";position:absolute;left:25px;top:5px;bottom:5px;width:1px;background:linear-gradient(var(--gold),var(--wine),var(--gold))}
+.event{position:relative;padding:0 0 25px 68px}
+.event:last-child{padding-bottom:0}
+.event-marker{position:absolute;left:8px;top:0;width:36px;height:36px;border-radius:50%;background:var(--wine);border:2px solid var(--gold);color:#fff3d8;display:grid;place-items:center;font:16px var(--serif)}
+.event-card{padding:20px 20px 18px}
+.event-card h3{font:500 28px/1.1 var(--serif);color:var(--wine);margin:0 0 12px}
+.event-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;font-size:14px;line-height:1.5}
+.event-meta strong{display:block;color:var(--gold-deep);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.event-directions{display:inline-flex;align-items:center;min-height:44px;margin-top:12px;color:var(--wine);font-size:13px;text-transform:uppercase;letter-spacing:.1em}
+/* Album */
+.album-section{background:linear-gradient(180deg,#f8f0df,#efe1c7)}
+.album-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}
+.album-photo{padding:6px;background:#fffaf0;border:1px solid var(--gold);box-shadow:0 6px 18px rgba(89,58,34,.1);min-width:0}
+.album-photo button{display:block;width:100%;padding:0;border:0;background:transparent;min-height:100%;overflow:hidden}
+.album-photo img{display:block;width:100%;height:230px;object-fit:cover;object-position:center 35%;transition:transform .5s}
+.album-photo button:hover img{transform:scale(1.035)}
+/* Lightbox */
+#lightbox{position:fixed;inset:0;z-index:80;background:rgba(39,25,22,.94);display:none;align-items:center;justify-content:center;padding:24px}
+#lightbox.active{display:flex}
+.lightbox-inner{max-width:min(900px,100%);max-height:90svh;display:flex;flex-direction:column;align-items:center;gap:14px}
+#lightbox-image{max-width:100%;max-height:75svh;object-fit:contain;border:1px solid var(--gold);padding:5px;background:#fff8e9}
+.lightbox-controls{display:flex;align-items:center;gap:24px;color:#fff3d8}
+.lightbox-controls button{min-width:48px;min-height:48px;border:1px solid var(--gold);background:transparent;color:#fff3d8;font-size:22px}
+#photo-count{font-size:14px;letter-spacing:.12em}
+/* Footer */
+.site-footer{padding:80px 20px calc(50px + var(--safe-bottom));text-align:center;background:linear-gradient(180deg,#e9d7b8,#e4cfaa);overflow:hidden}
+.footer-couple{width:min(250px,70vw);height:190px;margin:0 auto 18px;display:block}
+.footer-names{font:clamp(48px,10vw,70px)/1 var(--script);color:var(--wine);margin:10px 0}
+.footer-date{font:500 19px var(--serif);color:var(--ink)}
+.footer-venue{font:16px/1.6 var(--serif);color:#654d39;max-width:450px;margin:10px auto}
+.footer-families{font:italic 18px var(--serif);color:var(--wine);margin:20px 0}
+.footer-note{font:italic 16px var(--serif);margin:12px auto;color:#725a42}
+.footer-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:24px}
+.lantern{position:fixed;bottom:-80px;z-index:60;width:20px;height:32px;border-radius:48% 48% 35% 35%;background:radial-gradient(ellipse at 50% 30%,#fff5bb,#e7a94b 60%,#b96a35);box-shadow:0 0 18px 7px rgba(232,172,79,.45);pointer-events:none;animation:float-lantern 6s ease-out forwards}
+.lantern:after{content:"";position:absolute;bottom:-7px;left:8px;width:4px;height:8px;border:1px solid #bd8c4b;border-top:0}
+@keyframes float-lantern{0%{transform:translateY(0) translateX(0) scale(.7);opacity:0}15%{opacity:1}100%{transform:translateY(-115vh) translateX(var(--drift)) scale(1.2);opacity:0}}
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+/* Decorative petals and sparkles */
+.petal{position:absolute;top:-30px;width:10px;height:17px;border-radius:100% 0 100% 0;background:linear-gradient(135deg,#e7b7a9,#c77d7d);opacity:.65;animation:petal-fall var(--dur) linear var(--delay) infinite}
+@keyframes petal-fall{0%{transform:translate3d(0,-5vh,0) rotate(0);opacity:0}10%{opacity:.7}50%{transform:translate3d(var(--sway),55vh,0) rotate(180deg)}100%{transform:translate3d(calc(var(--sway)*-.5),110vh,0) rotate(360deg);opacity:0}}
+.sparkle{position:absolute;width:7px;height:7px;background:var(--gold);clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);animation:twinkle var(--dur) ease-in-out var(--delay) infinite alternate;opacity:.6}
+@keyframes twinkle{to{opacity:.12;transform:scale(.55) rotate(45deg)}}
+@media(min-width:760px){.section{padding:100px 28px}.hero{min-height:100svh}.person-card .portrait{width:190px;height:215px}.album-photo img{height:280px}.venue-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:759px) and (min-width:561px){
+ .venue-grid{grid-template-columns:repeat(3,1fr);gap:10px}
+}
+@media(max-width:560px){
+ .section{padding:66px 18px}.couple-grid{gap:12px}.person-card{padding:20px 10px}.person-card .portrait{width:125px;height:150px}.person-name{font-size:35px}
+ .venue-grid{grid-template-columns:1fr 1fr;gap:10px}
+ .venue-grid .venue-card:last-child{grid-column:1 / -1}
+ .venue-card{padding:18px 10px;min-height:118px}.venue-card p{font-size:17px}
+ .map-caption{padding-top:165px;font-size:16px}
+ .album-grid{grid-template-columns:repeat(2,1fr);gap:9px}.album-photo img{height:205px}
+ .event{padding-left:57px}.event-card{padding:17px 14px}.event-meta{grid-template-columns:1fr 1fr;gap:8px}
+ .opening-card{min-height:470px}.hero{padding-top:90px}
+}
+@media(max-width:360px){.count-grid{gap:5px}.count-unit{padding:13px 2px}.count-label{font-size:10px}.hero-names{font-size:60px}}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+ .reveal{opacity:1!important;transform:none!important}
+ #effects{display:none!important}
+}
+</style>
+</head>
+<body class="locked">
+<div class="paper-grain" aria-hidden="true"></div>
+<canvas id="effects" aria-hidden="true"></canvas>
+
+<!-- Opening envelope: tap, click, Enter or Space -->
+<div id="opening" role="dialog" aria-label="Open wedding invitation">
+  <div class="opening-card">
+    <div class="opening-arch"></div><div class="opening-flap"></div>
+    <div class="opening-content">
+      <p class="opening-blessing">Shree Ganeshaya Namah</p>
+      <div class="opening-title">Wedding Invitation</div>
+      <p style="font:italic 16px var(--serif);color:#80694d">Together with our families</p>
+      <button class="seal" id="open-seal" aria-label="Open invitation">A&amp;M</button>
+      <p class="open-hint">Tap the seal to open</p>
+    </div>
+    <div class="spark-burst" id="spark-burst"></div>
+  </div>
+</div>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo album">
+ <div class="lightbox-inner">
+  <img id="lightbox-image" src="images/photo3.jpg" alt="Anurag and Mamta">
+  <div class="lightbox-controls">
+   <button id="prev-photo" aria-label="Previous photo">‹</button>
+   <span id="photo-count">1 / 5</span>
+   <button id="next-photo" aria-label="Next photo">›</button>
+   <button id="close-lightbox" aria-label="Close photo">×</button>
+  </div>
+ </div>
+</div>
+
+<div class="site-shell">
+<svg id="plane-layer" aria-hidden="true" preserveAspectRatio="none">
+ <defs><path id="flight-path" d="M 10 0 C 88 300 12 500 88 800 S 12 1300 88 1600 S 12 2100 88 2500"/></defs>
+ <path id="flight-base" d="" fill="none" stroke="#C6A15B" stroke-width="3.4" stroke-linecap="round" stroke-dasharray="1 15" opacity=".4"/>
+ <path id="flight-trail" d="" fill="none" stroke="#967039" stroke-width="2" stroke-linecap="round" stroke-dasharray="12 12"/>
+ <g id="plane" opacity=".6">
+  <path d="M0 10 L64 0 L44 18 L34 16 L26 29 L21 28 L25 15 Z" fill="#967039" stroke="#F8F0DF" stroke-width="1.5"/>
+  <path d="M25 15 L64 0" stroke="#F8F0DF" stroke-width="1.5"/>
+  <path d="M-8 8 C-15 2 -19 5 -20 10 C-15 14 -12 13 -8 8" fill="#D8A2A0"/>
+ </g>
+</svg>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="home">
+ <div class="hero-inner">
+  <!-- Ganesh Image placeholder: replace src with your desired image path (e.g. ganesh.png / ganesh.svg) -->
+  <img class="ganesh" src="images/ganesha-icon.png" alt="Lord Ganesha" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><text y=\'50%\' x=\'50%\' dominant-baseline=\'central\' text-anchor=\'middle\' font-size=\'44\' fill=\'%23967039\'>卐</text></svg>'">
+  <p class="hero-blessing">Shree Ganeshaya Namah</p>
+  <p class="hero-kicker">With the blessings of our families</p>
+  <h1 class="hero-names">Anurag <span class="hero-amp">&amp;</span> Mamta</h1>
+  <p class="hero-subtitle">Wedding Invitation</p>
+  <div class="hero-ornament"><div class="gold-rule"></div><svg viewBox="0 0 220 28" width="100%" height="28"><path d="M0 14H82 M138 14H220 M91 14q19-24 38 0-19 24-38 0Z" fill="none" stroke="#967039"/><circle cx="110" cy="14" r="3" fill="#C6A15B"/></svg></div>
+  <p class="hero-date">2 December 2026, 7:00 PM IST</p>
+  <a class="btn" href="#countdown">Save the Date</a>
+  <span class="scroll-hint">Scroll to explore</span>
+ </div>
+</section>
+
+<!-- COUPLE -->
+<section class="section couple-section" id="couple">
+ <div class="inner">
+  <p class="eyebrow reveal">The celebration of two hearts</p>
+  <h2 class="section-title reveal">The Couple</h2><div class="ornament reveal"><span>❧</span></div>
+  <div class="couple-grid">
+   <article class="person-card frame reveal">
+    <div class="portrait"><img src="images/anurag_portrait.jpg" alt="Anurag Gupta portrait" style="object-position:50% 28%"></div>
+    <span class="person-label">The Groom</span><h3 class="person-name">Anurag</h3>
+   </article>
+    <article class="person-card frame reveal">
+    <div class="portrait"><img src="images/mamta_portrait.jpg" alt="Mamta Gupta portrait" style="object-position:50% 28%"></div>
+    <span class="person-label">The Bride</span><h3 class="person-name">Mamta</h3>
+   </article>
+  </div>
+ </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="section count-section" id="countdown">
+ <div class="inner">
+  <p class="eyebrow reveal">The auspicious moment</p><h2 class="section-title reveal">Counting the Moments</h2>
+  <p class="section-sub reveal">Until we celebrate together</p>
+  <div class="count-wrap frame reveal">
+   <div class="count-grid" id="count-grid">
+    <div class="count-unit"><div class="count-num" id="days">--</div><div class="count-label">Days</div></div>
+    <div class="count-unit"><div class="count-num" id="hours">--</div><div class="count-label">Hours</div></div>
+    <div class="count-unit"><div class="count-num" id="minutes">--</div><div class="count-label">Minutes</div></div>
+    <div class="count-unit"><div class="count-num" id="seconds">--</div><div class="count-label">Seconds</div></div>
+   </div>
+   <p id="just-married">Just Married</p>
+  </div>
+ </div>
+</section>
+
+<!-- VENUE -->
+<section class="section venue-section" id="venue">
+ <div class="inner">
+  <p class="eyebrow reveal">Join us for the celebration</p><h2 class="section-title reveal">The Wedding</h2>
+  <div class="ornament reveal"><span>❧</span></div>
+  <div class="venue-grid">
+   <div class="venue-card frame reveal"><span class="mini-label">Date</span><p>02 Dec 2026</p></div>
+   <div class="venue-card frame reveal"><span class="mini-label">Time</span><p>7:00 PM</p></div>
+   <div class="venue-card frame reveal"><span class="mini-label">Venue</span><p>Red Magic Ballroom<br>and Lawns</p></div>
+  </div>
+  <a class="map-card reveal" href="https://maps.app.goo.gl/SmYmaVLWQK3dBiEh6" target="_blank" rel="noopener" aria-label="Open venue directions in Google Maps">
+   <svg viewBox="0 0 800 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="800" height="260" fill="#e9dfc8"/>
+    <path d="M-20 65Q160 20 290 80T560 55T830 80M-20 210Q170 170 310 210T600 190T830 220" fill="none" stroke="#fff8e8" stroke-width="28"/>
+    <path d="M120 -20Q150 80 110 150T160 290M390 -20Q350 75 415 140T390 290M670 -20Q620 70 690 150T650 290" fill="none" stroke="#fff8e8" stroke-width="22"/>
+    <path d="M-20 65Q160 20 290 80T560 55T830 80M-20 210Q170 170 310 210T600 190T830 220" fill="none" stroke="#c7b58f" stroke-width="1.5" stroke-dasharray="8 8"/>
+    <path d="M120 -20Q150 80 110 150T160 290M390 -20Q350 75 415 140T390 290M670 -20Q620 70 690 150T650 290" fill="none" stroke="#c7b58f" stroke-width="1.5" stroke-dasharray="8 8"/>
+    <g fill="#91a27a" opacity=".6"><path d="M25 120q35-50 70 0-35 45-70 0M500 140q35-50 70 0-35 45-70 0M720 125q30-40 60 0-30 40-60 0"/></g>
+    <!-- Shifted marker upward so it stays well clear of the caption below -->
+    <g transform="translate(405 85)"><path d="M0 0c-25 0-42 18-42 41 0 30 42 70 42 70s42-40 42-70C42 18 25 0 0 0z" fill="#702D37" stroke="#C6A15B" stroke-width="4"/><circle cy="40" r="14" fill="#f8f0df"/><circle cy="40" r="6" fill="#967039"/></g>
+   </svg>
+   <div class="map-caption">Red Magic Ballroom and Lawns · Tap to get directions</div>
+  </a>
+  <div class="venue-actions reveal">
+   <button class="btn" id="calendar-btn">Add to Calendar</button>
+   <a class="btn secondary" href="https://maps.app.goo.gl/SmYmaVLWQK3dBiEh6" target="_blank" rel="noopener">Get Directions</a>
+  </div>
+  <p class="section-sub reveal" style="margin-top:20px">Sunil Chaugule, opp. Euroschool, Sector-19, Airoli, Navi Mumbai, Maharashtra 400708</p>
+ </div>
+</section>
+
+<!-- EVENTS -->
+<section class="section events-section" id="events">
+ <div class="inner">
+  <p class="eyebrow reveal">A gathering of joyful moments</p><h2 class="section-title reveal">Wedding Celebrations</h2>
+  <p class="section-sub reveal">We look forward to celebrating each occasion with you</p>
+  <div class="timeline">
+   <article class="event reveal"><span class="event-marker">1</span><div class="event-card frame">
+    <h3>Matmangra</h3><div class="event-meta">
+     <div><strong>Date</strong>30 Nov 2026</div><div><strong>Day</strong>Monday</div>
+     <div><strong>Time</strong>10:00 AM</div><div><strong>Venue</strong>Athena Enclave, Kalyan</div>
+    </div><a class="event-directions" href="https://maps.app.goo.gl/sHRNsbqT2FzyMNik9" target="_blank" rel="noopener">Get Directions ↗</a>
+   </div></article>
+   <article class="event reveal"><span class="event-marker">2</span><div class="event-card frame">
+    <h3>Haldi</h3><div class="event-meta">
+     <div><strong>Date</strong>30 Nov 2026</div><div><strong>Day</strong>Monday</div>
+     <div><strong>Time</strong>7:00 PM</div><div><strong>Venue</strong>Athena Enclave, Kalyan</div>
+    </div><a class="event-directions" href="https://maps.app.goo.gl/sHRNsbqT2FzyMNik9" target="_blank" rel="noopener">Get Directions ↗</a>
+   </div></article>
+   <article class="event reveal"><span class="event-marker">3</span><div class="event-card frame">
+    <h3>Mayan Pooja</h3><div class="event-meta">
+     <div><strong>Date</strong>01 Dec 2026</div><div><strong>Day</strong>Tuesday</div>
+     <div><strong>Time</strong>10:00 AM</div><div><strong>Venue</strong>Athena Enclave, Kalyan</div>
+    </div><a class="event-directions" href="https://maps.app.goo.gl/sHRNsbqT2FzyMNik9" target="_blank" rel="noopener">Get Directions ↗</a>
+   </div></article>
+   <article class="event reveal"><span class="event-marker">4</span><div class="event-card frame">
+    <h3>Wedding</h3><div class="event-meta">
+     <div><strong>Date</strong>02 Dec 2026</div><div><strong>Day</strong>Wednesday</div>
+     <div><strong>Time</strong>7:00 PM</div><div><strong>Venue</strong>Red Magic Ballroom and Lawns</div>
+    </div><a class="event-directions" href="https://maps.app.goo.gl/SmYmaVLWQK3dBiEh6" target="_blank" rel="noopener">Get Directions ↗</a>
+   </div></article>
+  </div>
+ </div>
+</section>
+
+<!-- PHOTO ALBUM -->
+<section class="section album-section" id="album">
+ <div class="inner">
+  <p class="eyebrow reveal">Moments to cherish</p><h2 class="section-title reveal">Our Photo Album</h2>
+  <p class="section-sub reveal">A little glimpse of our celebration</p>
+  <div class="album-grid">
+   <div class="album-photo reveal"><button data-photo="0" aria-label="Open photo 1"><img src="images/photo1.jpg" onerror="this.onerror=null;this.src='photo1.jpg'" alt="Anurag and Mamta together, photograph 1" style="object-position:48% 35%"></button></div>
+   <div class="album-photo reveal"><button data-photo="1" aria-label="Open photo 2"><img src="images/photo2.jpg" onerror="this.onerror=null;this.src='photo2.jpg'" alt="Anurag and Mamta together, photograph 2" style="object-position:52% 35%"></button></div>
+   <div class="album-photo reveal"><button data-photo="2" aria-label="Open photo 3"><img src="images/photo3.jpg" alt="Anurag and Mamta together, photograph 3" style="object-position:50% 35%"></button></div>
+   <div class="album-photo reveal"><button data-photo="3" aria-label="Open photo 4"><img src="images/photo4.jpg" onerror="this.onerror=null;this.src='photo3.jpg'" alt="Anurag and Mamta together, photograph 4" style="object-position:50% 35%"></button></div>
+   <div class="album-photo reveal"><button data-photo="4" aria-label="Open photo 5"><img src="images/photo5.jpg" onerror="this.onerror=null;this.src='photo4.jpg'" alt="Anurag and Mamta together, photograph 5" style="object-position:50% 35%"></button></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+ <svg class="footer-couple" viewBox="0 0 260 190" role="img" aria-label="Decorative illustration of the wedding couple">
+  <g stroke="#967039" stroke-width="1.5">
+   <path d="M35 190q8-68 56-70h28q30 12 35 70" fill="#292b39"/>
+   <path d="M120 190q6-68 52-70h28q30 12 35 70" fill="#d8a2a0"/>
+   <ellipse cx="104" cy="65" rx="33" ry="42" fill="#a9684d"/><path d="M70 66q-5-48 35-51 38 3 36 44-19-19-37-23-15 19-34 18" fill="#242128"/>
+   <path d="M78 92q24 24 50 0" fill="none" stroke="#49352b" stroke-width="5"/>
+   <ellipse cx="177" cy="68" rx="32" ry="41" fill="#b97858"/><path d="M145 68q-3-44 33-49 39 2 34 47l-9-19q-23 0-42-14-5 20-16 35" fill="#292329"/>
+   <path d="M153 96q24 22 48 0" fill="none" stroke="#8c3f43" stroke-width="3"/>
+   <path d="M145 122q32 18 64 0" fill="none" stroke="#C6A15B" stroke-width="3"/>
+  </g>
+  <path d="M104 115q32 30 65 0" fill="none" stroke="#C6A15B" stroke-width="2"/>
+  <path d="M18 160q18-26 34 0m-24 0q18-35 38 0m148 0q18-30 36 0" fill="none" stroke="#526B43" stroke-width="2"/>
+ </svg>
+ <p class="eyebrow">With joy in our hearts</p>
+ <h2 class="footer-names">Anurag &amp; Mamta</h2>
+ <p class="footer-date">2 December 2026, 7:00 PM IST</p>
+ <p class="footer-venue">Red Magic Ballroom and Lawns</p>
+ <div class="gold-rule"></div>
+ <p class="footer-families">With love, the Gupta families</p>
+ <div class="footer-actions">
+  <button class="btn" id="lantern-btn">Release a Wish Lantern</button>
+ </div>
+ <p class="footer-note">Shree Ganeshaya Namah</p>
+</footer>
+</div>
+
+<script>
+(() => {
+ "use strict";
+ const MAPS = "https://maps.app.goo.gl/SmYmaVLWQK3dBiEh6";
+ const IST_EVENT = Date.UTC(2026,11,2,13,30,0); // 19:00 at fixed UTC+05:30
+ const functions = [
+  {name:"Matmangra",date:"30 Nov 2026",day:"Monday",time:"10:00 AM",start:"20261130T043000"},
+  {name:"Haldi",date:"30 Nov 2026",day:"Monday",time:"7:00 AM",start:"20261130T013000"},
+  {name:"Mayan Pooja",date:"01 Dec 2026",day:"Tuesday",time:"10:00 AM",start:"20261201T043000"},
+  {name:"Wedding",date:"02 Dec 2026",day:"Wednesday",time:"7:00 PM",start:"20261202T133000"}
+ ];
+ const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+ const opening = document.getElementById("opening");
+ const seal = document.getElementById("open-seal");
+ let opened = false;
+ function burst(){
+  const holder=document.getElementById("spark-burst"); holder.innerHTML="";
+  for(let i=0;i<34;i++){
+   const dot=document.createElement("i"),a=Math.PI*2*i/34,r=70+Math.random()*120;
+   dot.style.left="50%";dot.style.top="50%";dot.style.setProperty("--x",Math.cos(a)*r+"px");dot.style.setProperty("--y",Math.sin(a)*r+"px");holder.appendChild(dot);
+  }
+ }
+ function openInvite(){
+  if(opened)return;opened=true;burst();seal.style.boxShadow="0 0 35px 14px rgba(198,161,91,.8)";
+  opening.classList.add("opened");
+  setTimeout(()=>{document.body.classList.remove("locked");opening.setAttribute("aria-hidden","true");startEffects();},950);
+ }
+ seal.addEventListener("click",openInvite);
+ opening.addEventListener("click",e=>{if(e.target===opening||e.target.classList.contains("opening-card"))openInvite()});
+ opening.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openInvite()}});
+ document.addEventListener("keydown",e=>{if(!opened&&(e.key==="Enter"||e.key===" ")){e.preventDefault();openInvite()}});
+ // Fixed-offset IST countdown (not visitor-local time).
+ function countdown(){
+  const left=IST_EVENT-Date.now();
+  if(left<=0){document.getElementById("count-grid").style.display="none";document.getElementById("just-married").style.display="block";return}
+  const d=Math.floor(left/86400000),h=Math.floor(left%86400000/3600000),m=Math.floor(left%3600000/60000),s=Math.floor(left%60000/1000);
+  [["days",d],["hours",h],["minutes",m],["seconds",s]].forEach(([id,n])=>document.getElementById(id).textContent=String(n).padStart(2,"0"));
+ }
+ countdown();setInterval(countdown,1000);
+ // Calendar file contains every supplied function; times converted to UTC for IST.
+ document.getElementById("calendar-btn").addEventListener("click",()=>{
+  const lines=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Anurag and Mamta//Wedding Invitation//EN","CALSCALE:GREGORIAN"];
+  functions.forEach((f,i)=>{
+   const next=new Date(Date.UTC(2026,10,30,4,30)+i*86400000);
+   let start=f.start;
+   const [ymd,hm]=[start.slice(0,8),start.slice(9)];
+   const year=+ymd.slice(0,4),month=+ymd.slice(4,6)-1,day=+ymd.slice(6,8),hour=+hm.slice(0,2),minute=+hm.slice(2,4);
+   const dt=new Date(Date.UTC(year,month,day,hour,minute));
+   const end=new Date(dt.getTime()+2*60*60*1000);
+   const stamp=d=>d.toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,"");
+   lines.push("BEGIN:VEVENT","UID:"+f.name.toLowerCase().replace(/\s/g,"-")+"-2026@anurag-mamta","DTSTAMP:"+stamp(new Date()),"DTSTART:"+stamp(dt),"DTEND:"+stamp(end),"SUMMARY:"+f.name,"LOCATION:Red Magic Ballroom and Lawns","DESCRIPTION:"+f.date+" ("+f.day+") · "+f.time+" · "+MAPS,"URL:"+MAPS,"END:VEVENT");
+  });
+  lines.push("END:VCALENDAR");
+  const blob=new Blob([lines.join("\r\n")],{type:"text/calendar;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");
+  a.href=url;a.download="Anurag-and-Mamta-Wedding.ics";document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+ });
+ // Photo album lightbox with keyboard and touch swipe.
+ const photoFiles=["images/photo1.jpg","images/photo2.jpg","images/photo3.jpg","images/photo4.jpg","images/photo5.jpg"];
+ let photoIndex=0,touchX=0;
+ const lightbox=document.getElementById("lightbox"),lbImg=document.getElementById("lightbox-image"),counter=document.getElementById("photo-count");
+ function showPhoto(i){photoIndex=(i+5)%5;lbImg.src=photoFiles[photoIndex];lbImg.onerror=()=>{lbImg.onerror=null;lbImg.src="images/photo3.jpg"};counter.textContent=(photoIndex+1)+" / 5"}
+ function closePhoto(){lightbox.classList.remove("active");document.body.style.overflow=""}
+ document.querySelectorAll("[data-photo]").forEach(b=>b.addEventListener("click",()=>{showPhoto(+b.dataset.photo);lightbox.classList.add("active");document.body.style.overflow="hidden"}));
+ document.getElementById("prev-photo").addEventListener("click",()=>showPhoto(photoIndex-1));
+ document.getElementById("next-photo").addEventListener("click",()=>showPhoto(photoIndex+1));
+ document.getElementById("close-lightbox").addEventListener("click",closePhoto);
+ lightbox.addEventListener("click",e=>{if(e.target===lightbox)closePhoto()});
+ document.addEventListener("keydown",e=>{if(!lightbox.classList.contains("active"))return;if(e.key==="Escape")closePhoto();if(e.key==="ArrowLeft")showPhoto(photoIndex-1);if(e.key==="ArrowRight")showPhoto(photoIndex+1)});
+ lightbox.addEventListener("touchstart",e=>touchX=e.changedTouches[0].clientX,{passive:true});
+ lightbox.addEventListener("touchend",e=>{const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>45)showPhoto(photoIndex+(dx<0?1:-1))},{passive:true});
+ // Wish lanterns
+ document.getElementById("lantern-btn").addEventListener("click",()=>{
+  for(let i=0;i<3;i++){const l=document.createElement("span");l.className="lantern";l.style.left=(25+i*25+Math.random()*8)+"%";l.style.setProperty("--drift",(Math.random()*100-50)+"px");l.style.animationDelay=(i*.35)+"s";document.body.appendChild(l);setTimeout(()=>l.remove(),7000)}
+ });
+ // Scroll reveals, plane path and subtle atmospheric effects.
+ let effectStarted=false,scrollY=0,rafPending=false;
+ const reveals=[...document.querySelectorAll(".reveal")];
+ if(reduced){reveals.forEach(el=>el.classList.add("visible"))}
+ else{
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}}),{threshold:.12});
+  reveals.forEach((el,i)=>{el.style.transitionDelay=(i%4)*75+"ms";observer.observe(el)});
+ }
+ const svg=document.getElementById("plane-layer"),base=document.getElementById("flight-base"),trail=document.getElementById("flight-trail"),plane=document.getElementById("plane");
+ function makePath(){
+  const w=document.documentElement.clientWidth,h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);
+  svg.setAttribute("viewBox",`0 0 ${w} ${h}`);svg.style.height=h+"px";
+  const x1=w*.12,x2=w*.88;
+  const d=`M ${x1} 0 C ${x2} ${h*.10}, ${x1} ${h*.17}, ${x2} ${h*.25} S ${x1} ${h*.42}, ${x2} ${h*.50} S ${x1} ${h*.67}, ${x2} ${h*.75} S ${x1} ${h*.92}, ${x2} ${h}`;
+  base.setAttribute("d",d);trail.setAttribute("d",d);
+  return d;
+ }
+ function updatePlane(){
+  const h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight),w=innerWidth;
+  const progress=Math.min(1,Math.max(0,(scrollY+innerHeight*.42)/h));
+  const path=base;const len=path.getTotalLength(),p=len*progress,pt=path.getPointAtLength(p),before=path.getPointAtLength(Math.max(0,p-2)),angle=Math.atan2(pt.y-before.y,pt.x-before.x)*180/Math.PI;
+  plane.setAttribute("transform",`translate(${pt.x-32} ${pt.y-14}) rotate(${angle})`);
+  trail.style.strokeDasharray=`${p} ${len}`;trail.style.strokeDashoffset="0";
+ }
+ function onScroll(){scrollY=window.scrollY;if(!rafPending){rafPending=true;requestAnimationFrame(()=>{updatePlane();rafPending=false})}}
+ window.addEventListener("scroll",onScroll,{passive:true});
+ window.addEventListener("resize",()=>{makePath();updatePlane()},{passive:true});
+ if(!reduced){makePath();updatePlane();window.addEventListener("load",()=>{makePath();updatePlane()})}
+ // Parallax is transform-only and subtle.
+ const hero=document.querySelector(".hero-inner");
+ window.addEventListener("scroll",()=>{if(!reduced&&hero){hero.style.transform=`translate3d(0,${Math.min(80,window.scrollY*.12)}px,0)`}},{passive:true});
+ // One canvas: falling petals, glitter and candle-glow/tap ripple. Starts after reveal.
+ const canvas=document.getElementById("effects"),ctx=canvas.getContext("2d");
+ let cw=0,ch=0,dpr=1,petals=[],glints=[],pointer={x:-100,y:-100,active:false,last:0},ripples=[];
+ function resizeCanvas(){dpr=Math.min(devicePixelRatio||1,2);cw=innerWidth;ch=innerHeight;canvas.width=cw*dpr;canvas.height=ch*dpr;canvas.style.width=cw+"px";canvas.style.height=ch+"px";ctx.setTransform(dpr,0,0,dpr,0,0)}
+ function seedEffects(){
+  const count=innerWidth<600?10:18;petals=Array.from({length:count},()=>({x:Math.random()*cw,y:Math.random()*ch,vy:.25+Math.random()*.45,vx:(Math.random()-.5)*.3,r:5+Math.random()*5,rot:Math.random()*6.28,vr:(Math.random()-.5)*.012}));
+  glints=Array.from({length:28},()=>({x:Math.random()*cw,y:Math.random()*ch,phase:Math.random()*6.28,size:1+Math.random()*2}));
+ }
+ function drawEffects(t){
+  if(!effectStarted||reduced)return;
+  ctx.clearRect(0,0,cw,ch);
+  petals.forEach(p=>{p.y+=p.vy;p.x+=p.vx+Math.sin(t*.0007+p.rot)*.25;p.rot+=p.vr;if(p.y>ch+20){p.y=-20;p.x=Math.random()*cw}ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot);ctx.fillStyle="rgba(216,162,160,.58)";ctx.beginPath();ctx.moveTo(0,-p.r);ctx.quadraticCurveTo(p.r*1.2,-p.r*.2,0,p.r);ctx.quadraticCurveTo(-p.r*.8,0,0,-p.r);ctx.fill();ctx.restore()});
+  glints.forEach(g=>{const a=.12+.28*(.5+.5*Math.sin(t*.001+g.phase));ctx.fillStyle=`rgba(198,161,91,${a})`;ctx.beginPath();ctx.moveTo(g.x,g.y-g.size*2);ctx.lineTo(g.x+g.size*.5,g.y);ctx.lineTo(g.x,g.y+g.size*2);ctx.lineTo(g.x-g.size*.5,g.y);ctx.closePath();ctx.fill()});
+  if(pointer.active&&t-pointer.last<1200){const grd=ctx.createRadialGradient(pointer.x,pointer.y,0,pointer.x,pointer.y,85);grd.addColorStop(0,"rgba(230,190,111,.22)");grd.addColorStop(1,"rgba(230,190,111,0)");ctx.fillStyle=grd;ctx.fillRect(pointer.x-85,pointer.y-85,170,170)}
+  ripples=ripples.filter(r=>t-r.t<700);ripples.forEach(r=>{const k=(t-r.t)/700;ctx.strokeStyle=`rgba(198,161,91,${1-k})`;ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(r.x,r.y,k*40,0,Math.PI*2);ctx.stroke()});
+  requestAnimationFrame(drawEffects);
+ }
+ function startEffects(){if(effectStarted)return;effectStarted=true;if(reduced)return;resizeCanvas();seedEffects();requestAnimationFrame(drawEffects)}
+ window.addEventListener("resize",()=>{if(effectStarted&&!reduced){resizeCanvas();seedEffects()}},{passive:true});
+ window.addEventListener("mousemove",e=>{pointer.x=e.clientX;pointer.y=e.clientY;pointer.active=true;pointer.last=performance.now()},{passive:true});
+ window.addEventListener("touchstart",e=>{const p=e.touches[0];ripples.push({x:p.clientX,y:p.clientY,t:performance.now()})},{passive:true});
+ // Start with a clean static layout if opened from a browser that restores scroll.
+ window.addEventListener("pageshow",()=>{if(!opened)window.scrollTo(0,0)});
+})();
+</script>
+</body>
+</html>
