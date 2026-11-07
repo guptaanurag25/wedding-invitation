@@ -7,7 +7,7 @@
 <title>Anurag &amp; Mamta — Wedding Invitation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 /* =========================================================
    WEDDING DETAILS — copied from the supplied invitation brief
@@ -28,14 +28,14 @@
    Haldi | 30 Nov 2026 | Monday | 7:00 AM
    Mayan Pooja | 01 Dec 2026 | Tuesday | 10:00 AM
    Wedding | 02 Dec 2026 | Wednesday | 7:00 PM
-   Photos: photo1.jpg, photo2.jpg, photo3.jpg, photo4.jpg, photo5.jpg
+   Photos: photo1.jpg, photo2.jpg, photo3.jpg, photo4.jpg, photo5.jpg, photo6.jpg
    ========================================================= */
 :root{
   --ivory:#F8F0DF;--cream:#EAD9B9;--gold:#C6A15B;--gold-deep:#967039;
   --wine:#702D37;--rose:#D8A2A0;--green:#526B43;--ink:#49352B;
   --paper:#fffaf0;--line:rgba(150,112,57,.55);
   --serif:"Cormorant Garamond",Georgia,serif;
-  --body:"Lora",Georgia,serif;--script:"Great Vibes",cursive;
+  --body:"Lora",Georgia,serif;--script:"Alex Brush","Great Vibes",cursive;
   --safe-top:env(safe-area-inset-top,0px);--safe-bottom:env(safe-area-inset-bottom,0px);
 }
 *{box-sizing:border-box}
@@ -130,7 +130,7 @@ main,.site-footer{position:relative;z-index:3}
 .venue-section{background:#f8f0df}
 .venue-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin:28px 0}
 .venue-card{padding:22px 15px;text-align:center;min-height:128px}
-.venue-card .mini-label{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:var(--gold-deep)}
+.venue-card .mini-label{font-size:14px;text-transform:uppercase;letter-spacing:.16em;color:var(--gold-deep)}
 .venue-card p{margin:9px 0 0;font:500 19px/1.35 var(--serif);color:var(--wine)}
 .venue-card .small{font:14px/1.6 var(--body);color:var(--ink)}
 .map-card{position:relative;overflow:hidden;margin:28px 0 24px;background:#eee1c7;border:1px solid var(--gold);min-height:210px;display:block;text-decoration:none}
@@ -192,7 +192,7 @@ main,.site-footer{position:relative;z-index:3}
  .section{padding:66px 18px}.couple-grid{gap:12px}.person-card{padding:20px 10px}.person-card .portrait{width:125px;height:150px}.person-name{font-size:35px}
  .venue-grid{grid-template-columns:1fr 1fr;gap:10px}
  .venue-grid .venue-card:last-child{grid-column:1 / -1}
- .venue-card{padding:18px 10px;min-height:118px}.venue-card p{font-size:17px}
+ .venue-card{padding:18px 10px;min-height:118px}.venue-card p{font-size:20px}
  .map-caption{padding-top:165px;font-size:16px}
  .album-grid{grid-template-columns:repeat(2,1fr);gap:9px}.album-photo img{height:205px}
  .event{padding-left:57px}.event-card{padding:17px 14px}.event-meta{grid-template-columns:1fr 1fr;gap:8px}
@@ -377,6 +377,7 @@ main,.site-footer{position:relative;z-index:3}
    <div class="album-photo reveal"><button data-photo="2" aria-label="Open photo 3"><img src="images/photo3.jpg" alt="Anurag and Mamta together, photograph 3" style="object-position:50% 35%"></button></div>
    <div class="album-photo reveal"><button data-photo="3" aria-label="Open photo 4"><img src="images/photo4.jpg" onerror="this.onerror=null;this.src='photo3.jpg'" alt="Anurag and Mamta together, photograph 4" style="object-position:50% 35%"></button></div>
    <div class="album-photo reveal"><button data-photo="4" aria-label="Open photo 5"><img src="images/photo5.jpg" onerror="this.onerror=null;this.src='photo4.jpg'" alt="Anurag and Mamta together, photograph 5" style="object-position:50% 35%"></button></div>
+   <div class="album-photo reveal"><button data-photo="4" aria-label="Open photo 5"><img src="images/photo6.jpg" onerror="this.onerror=null;this.src='photo4.jpg'" alt="Anurag and Mamta together, photograph 5" style="object-position:50% 35%"></button></div>
   </div>
  </div>
 </section>
@@ -467,7 +468,7 @@ main,.site-footer{position:relative;z-index:3}
   a.href=url;a.download="Anurag-and-Mamta-Wedding.ics";document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
  });
  // Photo album lightbox with keyboard and touch swipe.
- const photoFiles=["images/photo1.jpg","images/photo2.jpg","images/photo3.jpg","images/photo4.jpg","images/photo5.jpg"];
+ const photoFiles=["images/photo1.jpg","images/photo2.jpg","images/photo3.jpg","images/photo4.jpg","images/photo5.jpg", "images/photo6.jpg"];
  let photoIndex=0,touchX=0;
  const lightbox=document.getElementById("lightbox"),lbImg=document.getElementById("lightbox-image"),counter=document.getElementById("photo-count");
  function showPhoto(i){photoIndex=(i+5)%5;lbImg.src=photoFiles[photoIndex];lbImg.onerror=()=>{lbImg.onerror=null;lbImg.src="images/photo3.jpg"};counter.textContent=(photoIndex+1)+" / 5"}
