@@ -204,9 +204,46 @@ main,.site-footer{position:relative;z-index:3}
  .reveal{opacity:1!important;transform:none!important}
  #effects{display:none!important}
 }
+
+#music-toggle {
+  position: fixed;
+  bottom: calc(20px + var(--safe-bottom));
+  right: 20px;
+  z-index: 70;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  background: rgba(112, 45, 55, 0.9);
+  color: #fff8e8;
+  font-size: 18px;
+  display: none; /* Hidden until the envelope is opened */
+  place-items: center;
+  box-shadow: 0 4px 14px rgba(89, 58, 34, 0.25);
+  transition: transform 0.25s, opacity 0.25s;
+}
+#music-toggle.visible {
+  display: grid;
+}
+#music-toggle.muted {
+  opacity: 0.55;
+  text-decoration: line-through;
+}
+
 </style>
 </head>
 <body class="locked">
+
+<!-- Background Music -->
+<audio id="bg-music" loop preload="auto">
+  <source src="audio/wedding_invitation_audio.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Floating Mute/Unmute Button -->
+<button id="music-toggle" aria-label="Toggle background music" title="Toggle Music">
+  ♪
+</button>
+
 <div class="paper-grain" aria-hidden="true"></div>
 <canvas id="effects" aria-hidden="true"></canvas>
 
@@ -433,11 +470,37 @@ main,.site-footer{position:relative;z-index:3}
    dot.style.left="50%";dot.style.top="50%";dot.style.setProperty("--x",Math.cos(a)*r+"px");dot.style.setProperty("--y",Math.sin(a)*r+"px");holder.appendChild(dot);
   }
  }
+
+const bgMusic = document.getElementById("bg-music");
+const musicBtn = document.getElementById("music-toggle");
+bgMusic.volume = 0.45; // Keeps volume gentle and pleasant
+
  function openInvite(){
   if(opened)return;opened=true;burst();seal.style.boxShadow="0 0 35px 14px rgba(198,161,91,.8)";
   opening.classList.add("opened");
+
+// Start background music on user tap
+  bgMusic.play().then(() => {
+    musicBtn.classList.add("visible");
+  }).catch(() => {
+    // Shows button muted if browser still blocks playback
+    musicBtn.classList.add("visible", "muted");
+  });
+
   setTimeout(()=>{document.body.classList.remove("locked");opening.setAttribute("aria-hidden","true");startEffects();},950);
  }
+
+// Toggle play/pause when guest taps the floating button
+musicBtn.addEventListener("click", () => {
+  if (bgMusic.paused) {
+    bgMusic.play();
+    musicBtn.classList.remove("muted");
+  } else {
+    bgMusic.pause();
+    musicBtn.classList.add("muted");
+  }
+});
+
  seal.addEventListener("click",openInvite);
  opening.addEventListener("click",e=>{if(e.target===opening||e.target.classList.contains("opening-card"))openInvite()});
  opening.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openInvite()}});
