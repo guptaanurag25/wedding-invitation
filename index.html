@@ -475,6 +475,9 @@ const bgMusic = document.getElementById("bg-music");
 const musicBtn = document.getElementById("music-toggle");
 bgMusic.volume = 0.45; // Keeps volume gentle and pleasant
 
+// Tracks whether music was actively playing before the user left the tab/screen
+let wasPlayingBeforeHide = false;
+
  function openInvite(){
   if(opened)return;opened=true;burst();seal.style.boxShadow="0 0 35px 14px rgba(198,161,91,.8)";
   opening.classList.add("opened");
@@ -498,6 +501,32 @@ musicBtn.addEventListener("click", () => {
   } else {
     bgMusic.pause();
     musicBtn.classList.add("muted");
+  }
+});
+
+// Auto-pause on tab switch / Home screen, and auto-resume on return
+document.addEventListener("visibilitychange", () => {
+  if (!opened) return; // Do nothing if the envelope hasn't been opened yet
+
+  if (document.hidden) {
+    // User switched tabs, locked phone, or went to Home screen
+    if (!bgMusic.paused) {
+      wasPlayingBeforeHide = true;
+      bgMusic.pause();
+      musicBtn.classList.add("muted");
+    } else {
+      wasPlayingBeforeHide = false;
+    }
+  } else {
+    // User returned to the invitation page
+    if (wasPlayingBeforeHide) {
+      bgMusic.play().then(() => {
+        musicBtn.classList.remove("muted");
+      }).catch(() => {
+        // Fallback in case mobile Safari requires a fresh tap
+        musicBtn.classList.add("muted");
+      });
+    }
   }
 });
 
